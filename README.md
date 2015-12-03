@@ -28,6 +28,72 @@ swipe for recyclerview
 --------------------
 ![](https://github.com/android-cjj/JJSwipeLayout/blob/master/img/c.jpg)
 
+使用说明
+--------------------------------------------------、
+```xml
+<com.cjj.swipe.JJSwipeLayout
+    android:id="@+id/swipelayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+          <!--这一层是内容界面，外层包围内容的需要是ViewGroup，所以可以是Framelayout,RelativeLayout-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_wrapper_2"
+        android:layout_width="210dp"
+        android:layout_height="80dp">
+       <!--这一层是滑动的菜单界面,可以添加删除，喜欢等功能view-->
+    </LinearLayout>
+</com.cjj.swipe.JJSwipeLayout>
+```
+具体你可以看源码demo,使用很简单的，呵呵。
+
+其他
+-------------------------------------------------------
+jjSwipeLayout.isOpen()//是判断打开的状态
+jjSwipeLayout.setOnSwipeBackListener（）//监听swipe
+jjSwipeLayout.close()//关闭swipelayout
+jjSwipeLayout.open()//打开swipelayout
+jjSwipeLayout.setAlphaAnim(true);//设置菜单滑动出来的时候有透明动画效果
+
+
+If you want to support me,you can follow me on GitHub: https://github.com/android-cjj.
+
+
+
+License
+=======
+
+    The MIT License (MIT)
+
+	Copyright (c) 2015 android-cjj
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	SOFTWARE.
+
+
 
 
 
