@@ -49,7 +49,7 @@ public class JJSwipeLayout extends LinearLayout {
     /**滑动监听*/
     private SwipeListener mSwipeBackListener;
 
-    private boolean isAlpha = false;
+    private boolean isAnim = false;
 
     private boolean isOpen = false;
 
@@ -219,8 +219,8 @@ public class JJSwipeLayout extends LinearLayout {
         }
     }
 
-    public void setAlphaChange(boolean isAlphaChange){
-        this.isAlpha = isAlphaChange;
+    public void setAlphaAnim(boolean isAnim){
+        this.isAnim = isAnim;
     }
 
 
@@ -273,7 +273,7 @@ public class JJSwipeLayout extends LinearLayout {
             float per = Math.abs((float)left/(float)mSwipeWidth);
             if (changedView == mContentLayout) {
                 mBehindLayout.offsetLeftAndRight(dx);
-                if(isAlpha)
+                if(isAnim)
                 mBehindLayout.setAlpha(per);
             } else {
                 mContentLayout.offsetLeftAndRight(dx);

@@ -22,9 +22,11 @@ public class MyRvAdapter extends JJRvAdapter<String,MyViewHolder> {
     @Override
     public void onBindData(final int pos, final MyViewHolder holder, String item) {
         holder.tv_text.setText(item+"要有最樸素的生活和最遙遠的夢想，即使明天天寒地凍，山高水遠，路遠馬亡。");
+        holder.swipelayout.setAlphaAnim(true);
         holder.swipelayout.setOnSwipeBackListener(new JJSwipeLayout.SwipeListener() {
             @Override
             public void onOpen() {
+
 
             }
 
