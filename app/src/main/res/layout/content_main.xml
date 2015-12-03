@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cjj.demo.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ListView"
+        android:id="@+id/button"
+        android:onClick="onClick"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView"
+        android:id="@+id/button2"
+        android:onClick="onClick"
+        android:layout_marginTop="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <com.cjj.swipe.JJSwipeLayout
+        android:layout_marginTop="200dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:textSize="16sp"
+                android:text="要有最樸素的生活和最遙遠的夢想，即使明天天寒地凍，山高水遠，路遠馬亡。"
+                android:paddingLeft="4dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:textColor="#202020"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_wrapper_2"
+            android:layout_width="210dp"
+            android:layout_height="80dp">
+
+            <ImageView
+                android:id="@+id/magnifier2"
+                android:src="@drawable/magnifier"
+                android:layout_width="70dp"
+                android:background="#f7e79c"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/star2"
+                android:src="@drawable/star"
+                android:layout_width="70dp"
+                android:background="#4cd964"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/trash2"
+                android:src="@drawable/trash"
+                android:layout_width="70dp"
+                android:background="#ff2020"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </com.cjj.swipe.JJSwipeLayout>
+
+</RelativeLayout>
