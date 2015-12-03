@@ -26,17 +26,18 @@ public class MyRvAdapter extends JJRvAdapter<String,MyViewHolder> {
         holder.swipelayout.setOnSwipeBackListener(new JJSwipeLayout.SwipeListener() {
             @Override
             public void onOpen() {
-
-
             }
 
             @Override
             public void onClose() {
+            }
+
+            @Override
+            public void onSwipe(float per) {
 
             }
 
         });
-
         holder.tv_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

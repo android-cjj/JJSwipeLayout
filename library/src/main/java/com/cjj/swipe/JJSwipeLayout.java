@@ -13,6 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 /**
  * Created by cjj on 2015/12/3.
@@ -33,6 +34,8 @@ public class JJSwipeLayout extends LinearLayout {
 
     /**手势事件类*/
     private GestureDetectorCompat mGestureDetectorCompat;
+
+
 
     /**左滑距离*/
     private int mSwipeLeft;
@@ -113,6 +116,8 @@ public class JJSwipeLayout extends LinearLayout {
 
         /**关闭*/
         public void onClose();
+
+        public void onSwipe(float per);
 
     }
 
@@ -207,6 +212,12 @@ public class JJSwipeLayout extends LinearLayout {
         if (null != mSwipeBackListener) mSwipeBackListener.onClose();
         isOpen = false;
     }
+    public void closeFast()
+    {
+        mContentLayout.layout(0,0,mWidth,mHeight);
+        if (null != mSwipeBackListener) mSwipeBackListener.onClose();
+        isOpen = false;
+    }
 
 
     /**
@@ -249,17 +260,19 @@ public class JJSwipeLayout extends LinearLayout {
 
         @Override
         public void onViewReleased(View releasedChild, float xvel, float yvel) {
-            Log.i(Tag, "onViewReleased");
+            Log.i(Tag, "xvel----》"+xvel);
+
+
             if (xvel > 0) {
                 close();
-            } else if (xvel < 0) {
+            } else if (xvel <=0) {
                 open();
             } else if (-mSwipeLeft <= mSwipeWidth * 0.5) {
                 open();
             } else if (-mSwipeLeft > mSwipeWidth * 0.5) {
                 close();
             } else {
-                close();
+                open();
             }
         }
 
@@ -271,6 +284,8 @@ public class JJSwipeLayout extends LinearLayout {
             Log.i(Tag,"onViewPositionChanged");
             mSwipeLeft = left;
             float per = Math.abs((float)left/(float)mSwipeWidth);
+
+            if(null!=mSwipeBackListener)mSwipeBackListener.onSwipe(per);
             if (changedView == mContentLayout) {
                 mBehindLayout.offsetLeftAndRight(dx);
                 if(isAnim)
