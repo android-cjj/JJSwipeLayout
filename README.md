@@ -3,10 +3,7 @@ JJSwipeLayout
 The Sample Swipe Layout!
 ---------------------------------------------
 
-滑动删除的比较出名的的有代码家的[https://github.com/daimajia/AndroidSwipeLayout](https://github.com/daimajia/AndroidSwipeLayout)和Mr.Bao
-的[https://github.com/baoyongzhang/SwipeMenuListView](https://github.com/baoyongzhang/SwipeMenuListView),但是，代码家的那个功能太强大了，
-我之前用了，有点小bug,看着那么多的代码，心好累，自己改不了bug,我发现如果你不是要求那么多，只是像qq那样的简单功能的话，完全可以自己实现，
-Mr.bao那个是listView的，如果项目中是recyclerView的朋友要实现，可能又要大改了。。。
+滑动删除的比较出名的的有代码家的[https://github.com/daimajia/AndroidSwipeLayout](https://github.com/daimajia/AndroidSwipeLayout)和Mr.Bao的[https://github.com/baoyongzhang/SwipeMenuListView](https://github.com/baoyongzhang/SwipeMenuListView),但是，代码家的那个功能太强大了，我之前用了，有点小bug,看着那么多的代码，心好累，自己改不了bug,我发现如果你不是要求那么多，只是像qq那样的简单功能的话，完全可以自己实现，Mr.bao那个是listView的，如果项目中是recyclerView的朋友要实现，可能又要大改了。。。
 所以，我自己又重复造轮子了，请原谅我的无理取闹，明明别人已经写好了，我还没事找事，我只是实现了lv和rv都可以适应，一个方向的SwipeLayout...
 
 效果：
@@ -16,7 +13,7 @@ Mr.bao那个是listView的，如果项目中是recyclerView的朋友要实现，
 
 (原谅我无耻的偷了代码家的动图，啊哈哈)
 
-base layout
+Base layout
 ---------------------------
 ![](https://github.com/android-cjj/JJSwipeLayout/blob/master/img/a.jpg)
 
@@ -29,7 +26,8 @@ swipe for recyclerview
 ![](https://github.com/android-cjj/JJSwipeLayout/blob/master/img/c.jpg)
 
 使用说明
---------------------------------------------------、
+--------------------------------------------------
+
 ```xml
 <com.cjj.swipe.JJSwipeLayout
     android:id="@+id/swipelayout"
@@ -58,9 +56,13 @@ swipe for recyclerview
 其他
 -------------------------------------------------------
 jjSwipeLayout.isOpen()//是判断打开的状态
+
 jjSwipeLayout.setOnSwipeBackListener（）//监听swipe
+
 jjSwipeLayout.close()//关闭swipelayout
+
 jjSwipeLayout.open()//打开swipelayout
+
 jjSwipeLayout.setAlphaAnim(true);//设置菜单滑动出来的时候有透明动画效果
 
 
